@@ -14,7 +14,10 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           flutter-version: '3.19.0'
-      - run: flutter create . --org com.kadi.app --project-name kadi
+      - run: >
+          flutter create . 
+          --org com.kadi.app 
+          --project-name kadi
       - run: mkdir -p lib && mv main.dart lib/main.dart
       - run: flutter pub get
       - run: flutter build apk --release
